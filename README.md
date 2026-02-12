@@ -1,26 +1,27 @@
-# MassCube Web Tools (Vue)
+# MassCube Web Tools
 
-A Vue 3 + Vite rebuild of MassCube companion web utilities with a unified UI:
+Web utilities for MassCube metabolomics workflows:
 
 - Aligned Feature Table Viewer
 - Peak Shape Viewer
 - MS/MS Mirror Plot + Cosine Similarity Viewer
 
-## Development
+## Run locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Production build
+## Build
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## Deployment notes
+## Deploy
 
-- This project is configured with `base: './'` in `vite.config.js`.
-- Routing uses hash history, so it works on GitHub Pages without server-side rewrites.
+- Push to `main` to trigger `.github/workflows/deploy.yml`.
+- The site is published to GitHub Pages at:
+  `https://huaxuyu.github.io/masscube_webtools/`
