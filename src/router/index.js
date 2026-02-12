@@ -21,6 +21,11 @@ const routes = [
     name: 'msms-viewer',
     component: () => import('../views/CosineSimilarityView.vue'),
   },
+  {
+    path: '/eic-viewer',
+    name: 'eic-viewer',
+    component: () => import('../views/EicViewerView.vue'),
+  },
 ];
 
 const router = createRouter({

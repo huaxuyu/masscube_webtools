@@ -35,6 +35,8 @@ jobs:
 
       - name: Build site
         run: npm run build
+        env:
+          VITE_EIC_API_URL: ${{ vars.VITE_EIC_API_URL }}
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

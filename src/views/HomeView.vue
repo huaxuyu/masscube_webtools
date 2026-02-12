@@ -20,6 +20,12 @@ const tools = [
     route: '/msms-viewer',
     accent: 'mint',
   },
+  {
+    title: 'mzML EIC Viewer',
+    subtitle: 'Upload mzML files and extract ion chromatograms through the MassCube Python backend.',
+    route: '/eic-viewer',
+    accent: 'slate',
+  },
 ];
 </script>
 
@@ -67,12 +73,11 @@ const tools = [
   display: grid;
   gap: 16px;
   margin-top: 24px;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .tool-card {
   display: block;
-  grid-column: span 4;
   position: relative;
   cursor: pointer;
   opacity: 0;
@@ -109,6 +114,10 @@ const tools = [
   background: linear-gradient(140deg, rgba(15, 157, 106, 0.15), rgba(15, 157, 106, 0.03) 62%);
 }
 
+.tool-card[data-accent='slate']::before {
+  background: linear-gradient(140deg, rgba(71, 85, 105, 0.16), rgba(71, 85, 105, 0.03) 62%);
+}
+
 .card-body {
   display: grid;
   gap: 14px;
@@ -143,19 +152,10 @@ h2 {
   line-height: 1.65;
 }
 
-@media (max-width: 1150px) {
-  .tool-card {
-    grid-column: span 6;
-  }
-}
-
 @media (max-width: 700px) {
   .tool-grid {
     margin-top: 16px;
-  }
-
-  .tool-card {
-    grid-column: span 12;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .card-body {
